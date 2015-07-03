@@ -3,7 +3,27 @@
  application.js
  */
 
-// Handler for navigating to the next page 
+// MOBILE REDIRECTION CODE
+function viewFullWebsite() {
+  var now = new Date();
+  var expiresDate = new Date();
+  expiresDate.setDate(now.getDate() + 1);
+  $.cookie("view", 2, {
+    expires: expiresDate
+  });
+  if ($.cookie('view') == 2) {
+    console.log("Redirecting to main website");
+    window.location = "../index.html";
+  }
+}
+
+if ($.cookie('view') == 2) {
+  console.log("Redirecting to main website");
+  window.location = "../index.html";
+}
+
+
+// Handler for navigating to the next page
 function navnext(next) {
   $(":mobile-pagecontainer").pagecontainer("change", "#" + next, {
     transition: "slide"
@@ -22,11 +42,11 @@ function navprev(prev) {
 $(document).ready(function() {
   $(".panzoom").panzoom();
 
-  $(".goto").click(function(){
+  $(".goto").click(function() {
     $("body").attr("go-to", $(this).attr("href"));
   });
 
-  $(".go-to").on('click', function(e){
+  $(".go-to").on('click', function(e) {
     e.preventDefault();
     $(this).removeClass('ui-btn-active');
     var goTo = $("body").attr("go-to") || "#programs";
@@ -35,9 +55,9 @@ $(document).ready(function() {
 
   // Close the menu when click outisde
   $(document).click(function(event) {
-    var div =  $('.nav > ul');
-    if(!$(event.target).closest('.nav').length) {
-      if($(div).is(":visible")) {
+    var div = $('.nav > ul');
+    if (!$(event.target).closest('.nav').length) {
+      if ($(div).is(":visible")) {
         $(div).hide()
       }
     }
@@ -45,7 +65,7 @@ $(document).ready(function() {
 
   // toggle the menu with the button
   $(".nav").on('click', function() {
-    var div =  $('.nav > ul');
+    var div = $('.nav > ul');
     div.fadeToggle();
   });
 
@@ -67,7 +87,7 @@ $(document).on("pagecreate", function() {
     }
   });
 
-  $(document).on("collapsibleexpand", "[data-role=collapsible]", function () {
+  $(document).on("collapsibleexpand", "[data-role=collapsible]", function() {
     var position = $(this).offset().top;
     console.log("Accordion scoll to " + position);
     $.mobile.silentScroll(position);
@@ -119,4 +139,3 @@ $(document).on("pageshow", ".demo-page", function() {
     $(".prev").addClass("ui-state-disabled");
   }
 });
-
