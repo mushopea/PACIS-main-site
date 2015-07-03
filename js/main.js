@@ -5,7 +5,6 @@ function viewMobileWebsite() {
   $.cookie("view", 1, {
     expires: expiresDate
   });
-  console.log("viewMobileWebsite Redirecting to mobile website");
   window.location = "mobile/index.html";
 }
 
@@ -22,7 +21,6 @@ if (screen.width < 600) {
 
   // if cookie is 1, direct to mobile website
   if ($.cookie('view') == 1) {
-    console.log("Redirecting to mobile website");
     window.location = "mobile/index.html";
   }
 }
