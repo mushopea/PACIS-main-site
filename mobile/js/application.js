@@ -12,7 +12,6 @@ function viewFullWebsite() {
     expires: expiresDate
   });
   if ($.cookie('view') == 2) {
-    console.log("Redirecting to main website");
     window.location = "../index.html";
   }
 }
