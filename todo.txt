@@ -1,0 +1,5 @@
+Local attractions
+ copy CHI attractions
+	Singapore
+	Attractions 
+	(two paragraphs total)

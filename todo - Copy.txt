@@ -1,0 +1,55 @@
+sitemap.xml
+ front page 1.0
+ news and contact us 0.9
+ track & submission guideline 0.8
+ the rest 0.5
+
+contact us
+ pacis2015@gmail.com
+ follow 2013 website
+ dept of is, soc, nus
+
+venue
+ copy chi big data website
+ change title to Conference Venue
+
+journal publicication
+ follow chi website. Journal of Global Information Management (JGIM), Information & Management (I&M)
+
+call for paper
+ link poster in new window
+ change url to no www
+
+Initial submission guideline
+ follow 2013 website
+ link to own presentation guideline
+ initial submission - download template and upload to website
+ second submission - same
+ withdrawn papers - change email name and address to 2015, may 4 2015
+
+Footer
+ privacy policy temp webpage
+ contact us change to email
+
+Accepted paper
+ Copy everything except final submission datelines
+ authorization form get from email
+ replace AIS link get from email
+
+VISA information
+ copy chi travelling.html
+ Nationals of a large maj....
+ copy ICA table
+ For more information
+
+Local attractions
+ copy CHI attractions
+	Singapore
+	Attractions 
+	(two paragraphs total)
+
+Accomodation
+ H1: Main conference hotel , MBS hotel, special rates to be announced
+ H2: Other hotels
+ copy exactly CHI except rates TBA
+ dont put bOOK NOW! button
