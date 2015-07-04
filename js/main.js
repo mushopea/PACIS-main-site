@@ -1,28 +1,6 @@
 function viewMobileWebsite() {
-  var now = new Date();
-  var expiresDate = new Date();
-  expiresDate.setDate(now.getDate() + 1);
-  $.cookie("view", 1, {
-    expires: expiresDate
-  });
-  window.location = "mobile/index.html";
-}
-
-if (screen.width < 600) {
-  // if there is no cookie, set it to 1: mobile website
-  if ($.cookie('view') == null) {
-    var now = new Date();
-    var expiresDate = new Date();
-    expiresDate.setDate(now.getDate() + 1);
-    $.cookie("view", 1, {
-      expires: expiresDate
-    });
-  }
-
-  // if cookie is 1, direct to mobile website
-  if ($.cookie('view') == 1) {
-    window.location = "mobile/index.html";
-  }
+  $.cookie("view", 1);
+  window.location = "http://pacis2015.org/mobile/index.html";
 }
 
 $(document).ready(function() {
@@ -31,5 +9,17 @@ $(document).ready(function() {
   } else {
     // hiding mobile link
     $(".mobile-site-link").hide();
+  }
+
+  console.log(screen.width );
+  if (screen.width < 600) {
+    if ($.cookie('view') == undefined) {
+      $.cookie("view", 1)
+    }
+
+    // if cookie is 1, direct to mobile website
+    if ($.cookie('view') == 1) {
+     window.location = "http://pacis2015.org/mobile/index.html";
+   }
   }
 });

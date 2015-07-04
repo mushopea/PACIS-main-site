@@ -12,15 +12,10 @@ function viewFullWebsite() {
     expires: expiresDate
   });
   if ($.cookie('view') == 2) {
-    window.location = "../index.html";
+	  console.log('clicking on mobile website:');
+    window.location = "http://pacis2015.org/index.html";
   }
 }
-
-if ($.cookie('view') == 2) {
-  console.log("Redirecting to main website");
-  window.location = "../index.html";
-}
-
 
 // Handler for navigating to the next page
 function navnext(next) {
@@ -39,6 +34,12 @@ function navprev(prev) {
 
 
 $(document).ready(function() {
+	if ($.cookie('view') == 2) {
+	  console.log("Redirecting to main website");
+	  window.location = "http://pacis2015.org/index.html";
+	}
+
+
   $(".panzoom").panzoom();
 
   $(".goto").click(function() {
